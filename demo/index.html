@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title>jsNotification Demo</title>
+  <script src="../src/jsNotification.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div style="margin-top:100px">
+    <textarea name="demo" id="demo" rows="3" cols="80">Notification.send({message: 'this is a demo'})</textarea>
+    <button onclick="demo()">Try Me!</button>
+  </div>
+  <script type="text/javascript" language="javascript" charset="utf-8">
+  //<![CDATA[
+  var demo = function() {
+    eval(document.getElementById('demo').value);
+  }
+  //]]>
+  </script>
+</body>
+</html>

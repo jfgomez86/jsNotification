@@ -13,7 +13,6 @@ var Notification = (function() {
       border: '1px solid #000',
       padding: '5px',
       margin: '0 auto',
-      width: '90%',
       height: '12px',
       paddingTop: '5px',
       background: '#FFEFC6',
