@@ -6,9 +6,67 @@
   <script src="../src/jsNotification.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-  <div style="margin-top:100px">
-    <textarea name="demo" id="demo" rows="3" cols="80">Notification.send({message: 'this is a demo'})</textarea>
-    <button onclick="demo()">Try Me!</button>
+  <div style="margin-top:10px">
+    <div style="float:right;margin-top:100px;">
+      <textarea name="demo" id="demo" rows="3" cols="80">Notification.send({message: 'this is a demo'})</textarea>
+      <button onclick="demo()">Try Me!</button>
+    </div>
+    <pre>
+jsNotification
+==============
+
+A simple themed notification widget, written purely in javascript, fully
+customizable.
+
+Usage
+=====
+
+Include jsNotification.js in your project, then call:
+
+  Notification.send({message: "Hello World"});
+
+The options object can be customized as follows:
+
+  theme    -- The theme to use for the notification (default is 'default').
+  duration -- The duration in miliseconds that the widget will be displayed.
+  onStart  -- Callback run before the notification is actually displayed but
+              just after creating the dom node (it's still not in the document).
+  onEnd    -- Callback run just before removing the notification element.
+
+  NOTE: Both callbacks receive the notification dom node as an argument.
+
+Themeing
+========
+
+The 'default' theme consists of a set of css rules written in JavaScript:
+
+  Notification.themes = {
+    'default': {
+      position: 'fixed',
+      'top': '-1px',
+      border: '1px solid #000',
+      padding: '5px',
+      margin: '0 auto',
+      width: '90%',
+      height: '12px',
+      paddingTop: '5px',
+      background: '#FFEFC6',
+      fontSize: '15px',
+      textAlign: 'center'
+    },
+  }
+
+In order to create a new theme you'll have to do something like this:
+
+  Notification.themes['your-theme-name'] = {
+    position: 'absolute',
+    top: 'something',
+    ...
+  }
+
+All notifications will be centered horizontally. There is currently no way to
+change this.
+    </pre>
   </div>
   <script type="text/javascript" language="javascript" charset="utf-8">
   //<![CDATA[
